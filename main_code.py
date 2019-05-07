@@ -103,9 +103,6 @@ ncbi_dict=o_dict.copy()
 for m,v in o_dict.items(): # extract orthogous gene list from dictionary to can convert it to ncbi gene ids
     u= ncbi_gene_id_conv(v)
     ncbi_dict[m]=u
-file=open("OrthKo.txt","w")
-file.write(ncbi_dict) # save dictionary (keys= ko gene id , values= ncbi gene ids list of this ko orthologous group.
-file.close()
 print(json.dumps(ncbi_dict,indent=4)) # easy to show
 
 # get sequence fron Entrez ncbi database of each orthologies gene
